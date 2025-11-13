@@ -9,12 +9,12 @@ import NotFound from "@/pages/not-found";
 function AppRoutes() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={Home} />
-      <Route path="/services" component={Home} />
-      <Route path="/machines" component={Home} />
-      <Route path="/gallery" component={Home} />
-      <Route path="/contact" component={Home} />
+      <Route path="" component={Home} />
+      <Route path="about" component={Home} />
+      <Route path="services" component={Home} />
+      <Route path="machines" component={Home} />
+      <Route path="gallery" component={Home} />
+      <Route path="contact" component={Home} />
       <Route component={NotFound} />
     </Switch>
   );
