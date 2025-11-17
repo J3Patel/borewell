@@ -6,33 +6,53 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Award, Building, Compass, MapPinned, Users } from "lucide-react";
+import { Award, Building, Compass, MapPinned, Users, MapPin } from "lucide-react";
 
-const milestones = [
+const timeline = [
   {
-    year: "1992",
-    title: "Foundation",
-    description:
-      "Launched Heritage Borewells with a single truck-mounted rig serving agricultural communities around Karnataka.",
+    year: "1982",
+    location: "Chambal, Madhya Pradesh",
+    description: "Company founded with first borewell drilling work completed in Chambal region, establishing our foundation in water access solutions.",
+    period: "Foundation",
   },
   {
-    year: "2001",
-    title: "Nationwide Expansion",
-    description:
-      "Opened regional yards in Maharashtra and Andhra Pradesh, enabling rapid mobilization for industrial projects.",
+    year: "Mid-1980s",
+    location: "Indore, Madhya Pradesh",
+    description: "Expanded operations to Indore, serving growing industrial and agricultural needs in central India.",
+    period: "Regional Expansion",
   },
   {
-    year: "2010",
-    title: "Technology Upgrade",
-    description:
-      "Invested in high-capacity hydraulic rigs, mud-pump recyclers, and a quality assurance lab for water testing.",
+    year: "Late 1980s",
+    location: "Ahmedabad, Gujarat",
+    description: "Established presence in Ahmedabad, supporting rapid urbanization and industrial development in western India.",
+    period: "Western India Entry",
   },
   {
-    year: "2020",
-    title: "Sustainable Solutions",
-    description:
-      "Introduced solar borewell integrations and remote pump monitoring for housing societies and smart campuses.",
+    year: "Early 1990s",
+    location: "Shahada, Maharashtra",
+    description: "Moved operations to Shahada, strengthening our foothold in Maharashtra's agricultural heartland.",
+    period: "Maharashtra Operations",
   },
+  {
+    year: "2000-2015",
+    location: "Chopda, Maharashtra",
+    description: "15 years of dedicated service from Chopda base, completing hundreds of projects across Maharashtra and neighboring states.",
+    period: "15 Years in Chopda",
+  },
+  {
+    year: "2021-Present",
+    location: "Surat, Gujarat",
+    description: "Current headquarters in Surat, strategically positioned to serve Gujarat and coordinate PAN-India operations with enhanced logistics.",
+    period: "Current Base",
+  },
+];
+
+const panIndiaCoverage = [
+  { state: "Mumbai, Maharashtra", description: "Metropolitan projects and industrial zones" },
+  { state: "Odisha", description: "Mining and industrial water supply solutions" },
+  { state: "Madhya Pradesh", description: "Agricultural and rural water schemes" },
+  { state: "Karnataka", description: "IT hubs, residential complexes, and farms" },
+  { state: "Andhra Pradesh", description: "Industrial corridors and smart city projects" },
 ];
 
 const differentiators = [
@@ -103,11 +123,11 @@ export default function About() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
             <Badge className="bg-ring/15 text-ring border-ring/30 mb-6">About Heritage Borewells</Badge>
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Water access pioneers for over three decades
+              Water access pioneers for over four decades
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-              Since 1992 we have delivered reliable water infrastructure for farms, industries, residential projects, and
-              government programs. Our teams combine deep geological insight with purpose-built drilling technology to keep
+              Since 1982 we have delivered reliable water infrastructure for farms, industries, residential projects, and
+              government programs across India. Our teams combine deep geological insight with purpose-built drilling technology to keep
               every project on schedule—no matter the soil profile or location.
             </p>
           </div>
@@ -142,24 +162,30 @@ export default function About() {
                   </div>
                   <div className="rounded-xl border border-border/60 bg-muted/40 p-6 space-y-6">
                     <div>
-                      <h3 className="font-serif text-2xl font-bold mb-2">Pan-India coverage</h3>
+                      <h3 className="font-serif text-2xl font-bold mb-2">Current Operations</h3>
                       <p className="text-sm text-muted-foreground">
-                        Head office in Bangalore with satellite yards in Chennai, Hyderabad, Pune, Jaipur, Delhi, and Raipur.
+                        Headquartered in Surat, Gujarat since 2021, with 42 years of experience serving clients across India.
                         Our logistics enable cross-country mobilization within 48 hours.
                       </p>
                     </div>
                     <Separator />
-                    <ul className="space-y-4">
-                      {coverage.map(({ label, description }) => (
-                        <li key={label} className="flex gap-3">
-                          <MapPinned className="h-5 w-5 text-ring mt-1" />
-                          <div>
-                            <p className="font-medium">{label}</p>
-                            <p className="text-sm text-muted-foreground">{description}</p>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-ring" />
+                        Major Project Locations
+                      </h4>
+                      <ul className="space-y-3">
+                        {panIndiaCoverage.map(({ state, description }) => (
+                          <li key={state} className="flex gap-3">
+                            <MapPinned className="h-4 w-4 text-ring mt-1 flex-shrink-0" />
+                            <div>
+                              <p className="font-medium text-sm">{state}</p>
+                              <p className="text-xs text-muted-foreground">{description}</p>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -169,19 +195,91 @@ export default function About() {
 
         <section className="py-16 md:py-24 bg-muted/40">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-12">
-              Three decades of consistent delivery
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {milestones.map(({ year, title, description }) => (
-                <Card key={year} className="border-border/60 bg-card">
-                  <CardHeader>
-                    <Badge className="w-fit bg-ring/15 text-ring border-ring/30">{year}</Badge>
-                    <CardTitle className="text-xl">{title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-muted-foreground leading-relaxed">{description}</CardContent>
-                </Card>
-              ))}
+            <div className="text-center mb-12">
+              <Badge className="bg-ring/15 text-ring border-ring/30 mb-4">Our Journey</Badge>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-3">
+                42 Years of Growth Across India
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                From our first borewell in Chambal to our current base in Surat, follow our journey across states and decades.
+              </p>
+            </div>
+
+            {/* Timeline */}
+            <div className="relative max-w-4xl mx-auto">
+              {/* Vertical line */}
+              <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-ring via-ring/60 to-ring/30" />
+
+              {/* Timeline items */}
+              <div className="space-y-12">
+                {timeline.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`relative flex flex-col md:flex-row items-start gap-6 ${
+                      index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
+                  >
+                    {/* Timeline dot */}
+                    <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 -translate-y-1">
+                      <div className="h-4 w-4 rounded-full bg-ring border-4 border-background shadow-lg" />
+                    </div>
+
+                    {/* Content card */}
+                    <div
+                      className={`flex-1 ${
+                        index % 2 === 0
+                          ? "md:pr-8 md:text-right md:ml-auto md:max-w-[45%]"
+                          : "md:pl-8 md:text-left md:mr-auto md:max-w-[45%]"
+                      }`}
+                    >
+                      <Card className="border-border/60 bg-card shadow-md hover:shadow-lg transition-shadow">
+                        <CardHeader>
+                          <div
+                            className={`flex items-center gap-2 mb-2 ${
+                              index % 2 === 0 ? "md:justify-end" : "md:justify-start"
+                            }`}
+                          >
+                            <Badge className="bg-ring/15 text-ring border-ring/30">{item.year}</Badge>
+                            <Badge variant="outline" className="text-xs">{item.period}</Badge>
+                          </div>
+                          <div className="flex items-center gap-2 text-ring">
+                            <MapPin className="h-4 w-4" />
+                            <CardTitle className="text-lg font-semibold">{item.location}</CardTitle>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* PAN India Coverage */}
+            <div className="mt-16 pt-16 border-t border-border/60">
+              <div className="text-center mb-8">
+                <h3 className="font-serif text-2xl md:text-3xl font-bold mb-3">PAN-India Project Coverage</h3>
+                <p className="text-muted-foreground">
+                  Beyond our operational bases, we've completed projects across major states and regions
+                </p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {panIndiaCoverage.map(({ state, description }) => (
+                  <Card key={state} className="border-border/60 bg-card">
+                    <CardContent className="p-4">
+                      <div className="flex items-start gap-3">
+                        <MapPinned className="h-5 w-5 text-ring mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold text-sm mb-1">{state}</p>
+                          <p className="text-xs text-muted-foreground">{description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
