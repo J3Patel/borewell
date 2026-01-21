@@ -23,7 +23,7 @@ export default function AboutSection() {
 
             <div className="mt-8">
               <div className="text-3xl font-signature text-ring" data-testid="text-signature">
-                R. Krishnamurthy
+                Vallabhbhai Patel (V. M. Patel)
               </div>
               <div className="text-sm text-muted-foreground mt-1">Founder & Director</div>
             </div>
@@ -34,7 +34,7 @@ export default function AboutSection() {
               <div className="aspect-[3/4] rounded-lg overflow-hidden border-4 border-ring/20">
                 <img
                   src={ownerImage}
-                  alt="R. Krishnamurthy - Founder"
+                  alt="Vallabhbhai Patel - Founder"
                   className="w-full h-full object-cover"
                   data-testid="img-owner"
                 />

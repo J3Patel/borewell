@@ -44,15 +44,17 @@ export default function Hero() {
           >
             Get a Quote
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="bg-background/10 backdrop-blur-sm text-primary-foreground border-primary-foreground hover:bg-background/20"
-            data-testid="button-call-now"
-          >
-            <Phone className="h-5 w-5 mr-2" />
-            Call Now
-          </Button>
+          <a href="tel:+919921674492">
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-background/10 backdrop-blur-sm text-primary-foreground border-primary-foreground hover:bg-background/20"
+              data-testid="button-call-now"
+            >
+              <Phone className="h-5 w-5 mr-2" />
+              Call Now
+            </Button>
+          </a>
         </div>
 
         <div className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">

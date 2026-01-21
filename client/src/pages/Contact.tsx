@@ -86,8 +86,7 @@ export default function Contact() {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-1 text-sm">
-                  <p className="font-medium text-foreground">+91 98765 43210</p>
-                  <p className="font-medium text-foreground">+91 98765 43211</p>
+                  <p className="font-medium text-foreground">+91 99216 74492</p>
                   <p className="text-muted-foreground">Available 7 AM – 10 PM IST</p>
                 </CardContent>
               </Card>
@@ -105,7 +104,7 @@ export default function Contact() {
                   </div>
                 </CardHeader>
                 <CardContent className="text-sm space-y-1">
-                  <p className="font-medium text-foreground">on-site@heritageborewells.com</p>
+                  <p className="font-medium text-foreground">jatinpatel101@gmail.com</p>
                   <p className="text-muted-foreground">
                     Share project coordinates, access constraints, and urgency.
                   </p>
@@ -125,7 +124,7 @@ export default function Contact() {
                   </div>
                 </CardHeader>
                 <CardContent className="text-sm space-y-1">
-                  <p className="font-medium text-foreground">+91 90000 11111</p>
+                  <p className="font-medium text-foreground">+91 99216 74492</p>
                   <p className="text-muted-foreground">Emergency crew dispatch &amp; escalations</p>
                 </CardContent>
               </Card>
@@ -191,7 +190,7 @@ export default function Contact() {
                   <div className="flex items-center gap-3 text-sm">
                     <MapPin className="h-5 w-5 text-ring" />
                     <span className="text-muted-foreground">
-                      Corporate office: 123 Industrial Area, Sector 5, Bangalore, Karnataka 560001
+                      Corporate office: India
                     </span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
