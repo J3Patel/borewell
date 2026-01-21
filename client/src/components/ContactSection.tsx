@@ -129,9 +129,8 @@ export default function ContactSection() {
                     <Phone className="h-6 w-6 text-chart-1" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-1">Phone</h3>
-                    <p className="text-muted-foreground" data-testid="text-phone">+91 98765 43210</p>
-                    <p className="text-muted-foreground">+91 98765 43211</p>
+                    <h3 className="font-bold text-foreground mb-1">Phone & WhatsApp</h3>
+                    <p className="text-muted-foreground" data-testid="text-phone">+91 99216 74492</p>
                   </div>
                 </div>
               </CardContent>
@@ -145,8 +144,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground" data-testid="text-email">info@heritageborewells.com</p>
-                    <p className="text-muted-foreground">contact@heritageborewells.com</p>
+                    <p className="text-muted-foreground" data-testid="text-email">jatinpatel101@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -161,8 +159,6 @@ export default function ContactSection() {
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Head Office</h3>
                     <p className="text-muted-foreground" data-testid="text-address">
-                      123 Industrial Area, Sector 5<br />
-                      Bangalore, Karnataka 560001<br />
                       India
                     </p>
                   </div>

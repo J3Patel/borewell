@@ -42,6 +42,9 @@ export default function Header() {
                 </Button>
               </Link>
             ))}
+            <Link href="/contact">
+              <Button className="ml-4" variant="default">Get Quote</Button>
+            </Link>
           </nav>
 
           <Button
